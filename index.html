@@ -19,41 +19,41 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header">
-      <nav class="nav" aria-label="Primary">
-        <ul class="nav__links">
-          <li><a href="#story">Our Story</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#artists">Artists</a></li>
-        </ul>
+    <div class="top-shell" id="top">
+      <header class="site-header">
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__links">
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#artists">Artists</a></li>
+          </ul>
 
-        <a class="logo" href="#top">
-          <span class="logo__mark" aria-hidden="true">✦</span>
-          <span class="logo__word">ÉLAN</span>
-          <span class="logo__sub">Hair &amp; Beauty</span>
-        </a>
+          <a class="logo" href="#top">
+            <span class="logo__mark" aria-hidden="true">✦</span>
+            <span class="logo__word">ÉLAN</span>
+            <span class="logo__sub">Hair &amp; Beauty</span>
+          </a>
 
-        <div class="nav__actions">
-          <a class="nav__ghost" href="#book">Book a chair</a>
-          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu">
-            <span class="sr-only">Open menu</span>
-            <span></span>
-            <span></span>
-          </button>
+          <div class="nav__actions">
+            <a class="nav__ghost" href="#book">Book a chair</a>
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu">
+              <span class="sr-only">Open menu</span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobile-menu" hidden>
+          <a href="#story">Our Story</a>
+          <a href="#services">Services</a>
+          <a href="#artists">Artists</a>
+          <a href="#tour">The Studio</a>
+          <a href="#book">Book a chair</a>
         </div>
-      </nav>
+      </header>
 
-      <div class="mobile-menu" id="mobile-menu" hidden>
-        <a href="#story">Our Story</a>
-        <a href="#services">Services</a>
-        <a href="#artists">Artists</a>
-        <a href="#tour">The Studio</a>
-        <a href="#book">Book a chair</a>
-      </div>
-    </header>
-
-    <main id="main">
-      <section class="hero" id="top">
+      <section class="hero">
         <div class="hero__copy">
           <p class="eyebrow">Downtown atelier · by appointment</p>
           <h1>
@@ -67,15 +67,12 @@
         <div class="hero__visual">
           <img
             class="hero__photo"
-            src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&amp;fit=crop&amp;w=1600&amp;q=80"
-            alt="Woman with softly lit complexion and natural hair, looking upward"
+            src="images/hero.jpg"
+            alt="Guest with natural curls, photographed in soft studio light"
           />
 
           <article class="float-card">
-            <img
-              src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;w=400&amp;q=80"
-              alt="Glossy brunette waves after a salon color treatment"
-            />
+            <img src="images/gloss.jpg" alt="Long glossy waves after a color gloss" />
             <div>
               <p class="float-card__kicker">New · Signature ritual</p>
               <h2>Gloss &amp; Color Veil</h2>
@@ -86,9 +83,9 @@
 
           <aside class="hero-stat" aria-label="Client count">
             <div class="avatars">
-              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=crop&amp;w=80&amp;q=80" alt="" />
-              <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&amp;fit=crop&amp;w=80&amp;q=80" alt="" />
-              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&amp;fit=crop&amp;w=80&amp;q=80" alt="" />
+              <img src="images/avatar-1.jpg" alt="" />
+              <img src="images/avatar-2.jpg" alt="" />
+              <img src="images/avatar-3.jpg" alt="" />
             </div>
             <div>
               <strong>18K+</strong>
@@ -97,7 +94,9 @@
           </aside>
         </div>
       </section>
+    </div>
 
+    <main id="main">
       <section class="trust-bar" aria-label="Studio promises">
         <div class="trust-item">
           <span class="icon">◇</span>
@@ -122,10 +121,7 @@
         <div class="story__stage">
           <p class="story__split story__split--left">Skilled<br />Hair<br />Artists</p>
           <figure class="story__portrait">
-            <img
-              src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-              alt="ÉLAN artist finishing a soft glam look"
-            />
+            <img src="images/artist-maya.jpg" alt="Soft glam makeup finishing at the studio" />
             <figcaption>
               <span>Maya Chen</span>
               Color Director
@@ -154,30 +150,21 @@
           <button class="carousel__nav" type="button" data-prev aria-label="Previous artist">‹</button>
           <div class="carousel__track" data-track>
             <article class="artist-card is-active">
-              <img
-                src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-                alt="Stylist Maya Chen cutting hair in the studio"
-              />
+              <img src="images/maya-work.jpg" alt="Maya finishing a blowout in natural light" />
               <div>
                 <h3>Maya Chen</h3>
                 <p>Color director · lived-in blondes</p>
               </div>
             </article>
             <article class="artist-card">
-              <img
-                src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-                alt="Stylist Julian Ortiz working on a precision cut"
-              />
+              <img src="images/stylist-cut.jpg" alt="Precision cut in progress at ÉLAN" />
               <div>
-                <h3>Julian Ortiz</h3>
+                <h3>Jules Ortiz</h3>
                 <p>Cut specialist · texture &amp; shape</p>
               </div>
             </article>
             <article class="artist-card">
-              <img
-                src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-                alt="Artist Noor Ali preparing a beauty treatment"
-              />
+              <img src="images/stylist-3.jpg" alt="Noor working color at the chair" />
               <div>
                 <h3>Noor Ali</h3>
                 <p>Skin &amp; brow · quiet glam</p>
@@ -186,7 +173,7 @@
           </div>
           <button class="carousel__nav" type="button" data-next aria-label="Next artist">›</button>
         </div>
-        <div class="dots" data-dots aria-hidden="true"></div>
+        <div class="dots" data-dots></div>
       </section>
 
       <section class="tour" id="tour">
@@ -196,25 +183,16 @@
         </div>
         <div class="tour__grid">
           <figure>
-            <img
-              src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-              alt="Warm salon interior with styling chairs"
-            />
+            <img src="images/tour-floor.jpg" alt="Open salon floor with styling chairs and daylight" />
             <figcaption>The floor</figcaption>
           </figure>
           <figure>
-            <img
-              src="https://images.unsplash.com/photo-1521590832167-7bcbfaaaebe8?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-              alt="Hair being washed at the basin"
-            />
+            <img src="images/salon-floor.jpg" alt="Hair being washed at the basin" />
             <figcaption>The rinse</figcaption>
           </figure>
           <figure>
-            <img
-              src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-              alt="Arranged salon products on a marble tray"
-            />
-            <figcaption>The shelf</figcaption>
+            <img src="images/salon-tools.jpg" alt="Round brush and dryer finishing a style" />
+            <figcaption>The finish</figcaption>
           </figure>
         </div>
       </section>
@@ -269,7 +247,7 @@
           <form class="book-form" id="book-form">
             <label>
               Name
-              <input type="text" name="name" required placeholder="Alex Rivera" />
+              <input type="text" name="name" required placeholder="Alex Rivera" autocomplete="name" />
             </label>
             <label>
               Service

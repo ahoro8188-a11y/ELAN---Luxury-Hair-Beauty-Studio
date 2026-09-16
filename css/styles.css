@@ -23,6 +23,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 1.5rem;
+}
+
 body {
   margin: 0;
   color: var(--ink);
@@ -79,11 +83,19 @@ p {
   top: 1rem;
 }
 
+.top-shell {
+  margin: 0.7rem 0.7rem 0;
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  background:
+    radial-gradient(circle at 78% 46%, rgba(80, 110, 90, 0.32), transparent 28%),
+    linear-gradient(160deg, #15231c 0%, #1e3227 55%, #31483c 100%);
+  color: var(--cream);
+  overflow: hidden;
+}
+
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: linear-gradient(180deg, rgba(27, 42, 34, 0.92), rgba(27, 42, 34, 0.55) 70%, transparent);
+  position: relative;
+  z-index: 3;
 }
 
 .nav {
@@ -179,20 +191,14 @@ p {
 }
 
 .hero {
-  min-height: 92vh;
-  margin: 0 0.8rem;
-  padding: 2rem 6vw 7rem;
-  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
-  background:
-    radial-gradient(circle at 78% 42%, rgba(80, 110, 90, 0.35), transparent 28%),
-    linear-gradient(160deg, #15231c 0%, #1e3227 55%, #31483c 100%);
+  min-height: 86vh;
+  padding: 1.2rem 6vw 8rem;
   color: var(--cream);
   display: grid;
   grid-template-columns: minmax(240px, 0.9fr) minmax(320px, 1.1fr);
   gap: 2rem;
   align-items: center;
   position: relative;
-  overflow: hidden;
 }
 
 .eyebrow {
@@ -316,6 +322,10 @@ p {
   align-items: center;
   gap: 0.8rem;
   color: var(--cream);
+  background: rgba(21, 35, 28, 0.55);
+  backdrop-filter: blur(10px);
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem 0.55rem 0.65rem;
 }
 
 .avatars {
@@ -440,6 +450,7 @@ p {
   bottom: 1rem;
   color: var(--white);
   font-size: 0.82rem;
+  text-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
 }
 
 .story__portrait figcaption span {
@@ -572,6 +583,10 @@ p {
   object-fit: cover;
 }
 
+.tour__grid figure:first-child img {
+  height: 340px;
+}
+
 .tour__grid figcaption {
   padding: 0.9rem 1rem 1.1rem;
   font-family: "Cormorant Garamond", Georgia, serif;
@@ -670,27 +685,48 @@ p {
 
 @media (max-width: 900px) {
   .nav {
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr auto;
   }
 
   .nav__links {
     display: none;
   }
 
+  .nav__ghost {
+    display: none;
+  }
+
+  .logo {
+    justify-self: start;
+    text-align: left;
+    justify-items: start;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
-    padding-bottom: 5rem;
+    padding-bottom: 6.5rem;
   }
 
   .hero__photo {
     margin: 0 auto;
-    height: 58vh;
+    height: 52vh;
   }
 
   .float-card {
+    position: relative;
+    left: auto;
     top: auto;
-    bottom: 18%;
+    width: 100%;
+    margin-top: -3.5rem;
+  }
+
+  .hero-stat {
+    right: 0;
+    left: 0;
+    bottom: 1.2rem;
+    width: max-content;
+    margin: 0 auto;
   }
 
   .story {
@@ -710,6 +746,11 @@ p {
 
   .tour__grid {
     grid-template-columns: 1fr;
+  }
+
+  .tour__grid figure:first-child img,
+  .tour__grid img {
+    height: 240px;
   }
 
   .site-footer {
