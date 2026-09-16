@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ÉLAN — Luxury Hair &amp; Beauty Studio</title>
+    <meta
+      name="description"
+      content="A demo landing page for ÉLAN, a luxury hair and beauty salon. Cuts, color, skin, and quiet confidence."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="top-shell" id="top">
+      <header class="site-header">
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__links">
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#artists">Artists</a></li>
+          </ul>
+
+          <a class="logo" href="#top">
+            <span class="logo__mark" aria-hidden="true">✦</span>
+            <span class="logo__word">ÉLAN</span>
+            <span class="logo__sub">Hair &amp; Beauty</span>
+          </a>
+
+          <div class="nav__actions">
+            <a class="nav__ghost" href="#book">Book a chair</a>
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu">
+              <span class="sr-only">Open menu</span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobile-menu" hidden>
+          <a href="#story">Our Story</a>
+          <a href="#services">Services</a>
+          <a href="#artists">Artists</a>
+          <a href="#tour">The Studio</a>
+          <a href="#book">Book a chair</a>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="hero__copy">
+          <p class="eyebrow">Downtown atelier · by appointment</p>
+          <h1>
+            <span>Look</span>
+            <em>better</em>
+          </h1>
+          <p class="hero__lead">Healthy hair. Quiet confidence. You.</p>
+          <a class="btn btn--light" href="#services">Explore the menu →</a>
+        </div>
+
+        <div class="hero__visual">
+          <img
+            class="hero__photo"
+            src="images/hero.jpg"
+            alt="Guest with natural curls, photographed in soft studio light"
+          />
+
+          <article class="float-card">
+            <img src="images/gloss.jpg" alt="Long glossy waves after a color gloss" />
+            <div>
+              <p class="float-card__kicker">New · Signature ritual</p>
+              <h2>Gloss &amp; Color Veil</h2>
+              <p>Lived-in color, glass shine, no brass.</p>
+              <a href="#book">Reserve now →</a>
+            </div>
+          </article>
+
+          <aside class="hero-stat" aria-label="Client count">
+            <div class="avatars">
+              <img src="images/avatar-1.jpg" alt="" />
+              <img src="images/avatar-2.jpg" alt="" />
+              <img src="images/avatar-3.jpg" alt="" />
+            </div>
+            <div>
+              <strong>18K+</strong>
+              <span>Happy guests</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </div>
+
+    <main id="main">
+      <section class="trust-bar" aria-label="Studio promises">
+        <div class="trust-item">
+          <span class="icon">◇</span>
+          <p>Clean formulas</p>
+        </div>
+        <div class="trust-item">
+          <span class="icon">◎</span>
+          <p>Color-safe always</p>
+        </div>
+        <div class="trust-item">
+          <span class="icon">○</span>
+          <p>All hair types</p>
+        </div>
+      </section>
+
+      <section class="story" id="story">
+        <div class="story__stat">
+          <strong>98%</strong>
+          <p>Leave seeing the difference</p>
+        </div>
+
+        <div class="story__stage">
+          <p class="story__split story__split--left">Skilled<br />Hair<br />Artists</p>
+          <figure class="story__portrait">
+            <img src="images/artist-maya.jpg" alt="Soft glam makeup finishing at the studio" />
+            <figcaption>
+              <span>Maya Chen</span>
+              Color Director
+            </figcaption>
+          </figure>
+          <p class="story__split story__split--right">Results-<br />Driven</p>
+        </div>
+
+        <div class="story__aside">
+          <p class="kicker">#01</p>
+          <h2>It is also highly trusted</h2>
+          <p>
+            A small house of stylists who still take the time. Built on technique,
+            booked by word of mouth, and kept that way on purpose.
+          </p>
+        </div>
+      </section>
+
+      <section class="artists" id="artists">
+        <div class="section-head">
+          <p class="kicker">The chair</p>
+          <h2>Meet the artists</h2>
+        </div>
+
+        <div class="carousel" data-carousel>
+          <button class="carousel__nav" type="button" data-prev aria-label="Previous artist">‹</button>
+          <div class="carousel__track" data-track>
+            <article class="artist-card is-active">
+              <img src="images/maya-work.jpg" alt="Maya finishing a blowout in natural light" />
+              <div>
+                <h3>Maya Chen</h3>
+                <p>Color director · lived-in blondes</p>
+              </div>
+            </article>
+            <article class="artist-card">
+              <img src="images/stylist-cut.jpg" alt="Precision cut in progress at ÉLAN" />
+              <div>
+                <h3>Jules Ortiz</h3>
+                <p>Cut specialist · texture &amp; shape</p>
+              </div>
+            </article>
+            <article class="artist-card">
+              <img src="images/stylist-3.jpg" alt="Noor working color at the chair" />
+              <div>
+                <h3>Noor Ali</h3>
+                <p>Skin &amp; brow · quiet glam</p>
+              </div>
+            </article>
+          </div>
+          <button class="carousel__nav" type="button" data-next aria-label="Next artist">›</button>
+        </div>
+        <div class="dots" data-dots></div>
+      </section>
+
+      <section class="tour" id="tour">
+        <div class="section-head">
+          <p class="kicker">Inside the house</p>
+          <h2>A short tour of our studio</h2>
+        </div>
+        <div class="tour__grid">
+          <figure>
+            <img src="images/tour-floor.jpg" alt="Open salon floor with styling chairs and daylight" />
+            <figcaption>The floor</figcaption>
+          </figure>
+          <figure>
+            <img src="images/salon-floor.jpg" alt="Hair being washed at the basin" />
+            <figcaption>The rinse</figcaption>
+          </figure>
+          <figure>
+            <img src="images/salon-tools.jpg" alt="Round brush and dryer finishing a style" />
+            <figcaption>The finish</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="section-head">
+          <p class="kicker">The menu</p>
+          <h2>What we do, and why people stay</h2>
+        </div>
+        <ul class="service-list">
+          <li>
+            <span>01</span>
+            <div>
+              <h3>Cut &amp; shape</h3>
+              <p>Precision cuts that grow out as well as they photograph.</p>
+            </div>
+            <em>from 95</em>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>Color veil</h3>
+              <p>Balayage, gloss, and corrective work without the brass.</p>
+            </div>
+            <em>from 185</em>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>Blow &amp; set</h3>
+              <p>Soft volume, glass finish, or a look that lasts the weekend.</p>
+            </div>
+            <em>from 65</em>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <h3>Skin &amp; brow</h3>
+              <p>Quiet facials and brow architecture for the rest of the face.</p>
+            </div>
+            <em>from 80</em>
+          </li>
+        </ul>
+      </section>
+
+      <section class="book" id="book">
+        <div class="book__panel">
+          <p class="kicker">Demo booking</p>
+          <h2>Hold a chair. We’ll pretend the calendar is real.</h2>
+          <p class="book__note">This is a one-page demo. Nothing is sent or saved.</p>
+
+          <form class="book-form" id="book-form">
+            <label>
+              Name
+              <input type="text" name="name" required placeholder="Alex Rivera" autocomplete="name" />
+            </label>
+            <label>
+              Service
+              <select name="service" required>
+                <option value="">Choose a service</option>
+                <option>Cut &amp; shape</option>
+                <option>Color veil</option>
+                <option>Blow &amp; set</option>
+                <option>Skin &amp; brow</option>
+              </select>
+            </label>
+            <label>
+              Preferred day
+              <input type="date" name="day" required />
+            </label>
+            <button class="btn btn--dark" type="submit">Request a time</button>
+          </form>
+          <p class="form-status" id="form-status" role="status" hidden></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>ÉLAN studio · demo only · 214 Mercer Street</p>
+      <p>Look better. Leave lighter.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
