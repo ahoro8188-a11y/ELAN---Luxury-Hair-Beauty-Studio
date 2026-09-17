@@ -71,20 +71,20 @@
   z-index: 30;
   width: 56px;
   height: 56px;
-  border: 1px solid rgba(27, 42, 34, 0.18);
+  border: 0;
   border-radius: 50%;
-  background: var(--paper);
-  color: var(--forest);
+  background: var(--forest);
+  color: var(--cream);
   cursor: pointer;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(18, 28, 22, 0.12);
+  box-shadow: 0 10px 30px rgba(18, 28, 22, 0.22);
 }
 
 .page-travel::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--forest);
+  background: #c4b49a;
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.45s cubic-bezier(0.76, 0, 0.24, 1);
@@ -97,7 +97,7 @@
 
 .page-travel:hover,
 .page-travel:focus-visible {
-  color: var(--cream);
+  color: var(--forest);
 }
 
 .page-travel__icon {
