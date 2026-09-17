@@ -1,0 +1,120 @@
+/* House pattern: opaque initials veil.
+   Reuse on every site. Set data-initials on [data-brand-open]. */
+
+.brand-open {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.brand-open.is-active {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.brand-open__veil {
+  position: absolute;
+  inset: 0;
+  background: #121c17;
+  transform: translateY(-100%);
+}
+
+.brand-open.is-intro .brand-open__veil,
+.brand-open.is-covering .brand-open__veil {
+  transform: translateY(0);
+}
+
+.brand-open.is-covering .brand-open__veil {
+  transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.brand-open.is-revealing .brand-open__veil {
+  transform: translateY(100%);
+  transition: transform 0.85s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.brand-open__initials {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 18vw, 11rem);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: #eadfcb;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.brand-open.is-intro .brand-open__initials,
+.brand-open.is-covering .brand-open__initials {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  transition-delay: 0.15s;
+}
+
+.brand-open.is-revealing .brand-open__initials {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.page-travel {
+  position: fixed;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 30;
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(27, 42, 34, 0.18);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--forest);
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(18, 28, 22, 0.12);
+}
+
+.page-travel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--forest);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.45s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.page-travel:hover::before,
+.page-travel:focus-visible::before {
+  transform: scaleY(1);
+}
+
+.page-travel:hover,
+.page-travel:focus-visible {
+  color: var(--cream);
+}
+
+.page-travel__icon {
+  position: relative;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+html.brand-open-pending,
+html.brand-open-pending body {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-open__veil,
+  .brand-open__initials,
+  .page-travel::before {
+    transition: none;
+  }
+}
