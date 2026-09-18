@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artists — ÉLAN Hair &amp; Beauty</title>
+    <meta
+      name="description"
+      content="Meet Maya, Jules, and Noor — the artists behind ÉLAN."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="top-shell top-shell--page">
+      <header class="site-header">
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__links">
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="artists.html" aria-current="page">Artists</a></li>
+            <li><a href="studio.html">The Studio</a></li>
+          </ul>
+
+          <a class="logo" href="index.html">
+            <span class="logo__mark" aria-hidden="true">✦</span>
+            <span class="logo__word">ÉLAN</span>
+            <span class="logo__sub">Hair &amp; Beauty</span>
+          </a>
+
+          <div class="nav__actions">
+            <a class="nav__ghost" href="book.html">Book a chair</a>
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu">
+              <span class="sr-only">Open menu</span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobile-menu" hidden>
+          <a href="index.html">Home</a>
+          <a href="story.html">Our Story</a>
+          <a href="services.html">Services</a>
+          <a href="artists.html" aria-current="page">Artists</a>
+          <a href="studio.html">The Studio</a>
+          <a href="book.html">Book a chair</a>
+        </div>
+      </header>
+
+      <section class="page-hero">
+        <p class="eyebrow">The chair</p>
+        <h1>Meet the <em>artists</em></h1>
+        <p class="page-hero__lead">
+          Three chairs. You book a person, not a random slot on a board.
+        </p>
+      </section>
+    </div>
+
+    <main id="main">
+      <section class="artists">
+        <div class="carousel" data-carousel>
+          <button class="carousel__nav" type="button" data-prev aria-label="Previous artist">‹</button>
+          <div class="carousel__track" data-track>
+            <article class="artist-card is-active">
+              <img src="images/maya-work.jpg" alt="Maya finishing a blowout in natural light" />
+              <div>
+                <h3>Maya Chen</h3>
+                <p>Color director · lived-in blondes</p>
+                <p class="artist-bio">
+                  Gloss work, balayage, and corrective color that still looks like your hair.
+                </p>
+              </div>
+            </article>
+            <article class="artist-card">
+              <img src="images/stylist-cut.jpg" alt="Precision cut in progress at ÉLAN" />
+              <div>
+                <h3>Jules Ortiz</h3>
+                <p>Cut specialist · texture &amp; shape</p>
+                <p class="artist-bio">
+                  Geometry for curls, waves, and the kind of blunt that still moves.
+                </p>
+              </div>
+            </article>
+            <article class="artist-card">
+              <img src="images/stylist-3.jpg" alt="Noor working color at the chair" />
+              <div>
+                <h3>Noor Ali</h3>
+                <p>Skin &amp; brow · quiet glam</p>
+                <p class="artist-bio">
+                  Soft skin rituals and brow architecture that reads as rest, not makeup.
+                </p>
+              </div>
+            </article>
+          </div>
+          <button class="carousel__nav" type="button" data-next aria-label="Next artist">›</button>
+        </div>
+        <div class="dots" data-dots></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="services.html">Services</a>
+        <a href="artists.html" aria-current="page">Artists</a>
+        <a href="studio.html">The Studio</a>
+        <a href="book.html">Book</a>
+      </nav>
+      <div class="footer-meta">
+        <p>ÉLAN studio · demo only · 214 Mercer Street</p>
+        <p>Look better. Leave lighter.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

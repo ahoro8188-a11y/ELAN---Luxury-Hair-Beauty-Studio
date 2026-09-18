@@ -41,6 +41,7 @@ function renderDots() {
 }
 
 function show(next) {
+  if (!cards.length) return;
   cards[index]?.classList.remove("is-active");
   index = (next + cards.length) % cards.length;
   cards[index]?.classList.add("is-active");
