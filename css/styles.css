@@ -111,12 +111,18 @@ p {
 
 .nav__links {
   display: flex;
-  gap: 1.4rem;
+  flex-wrap: wrap;
+  gap: 1.1rem;
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 0.86rem;
+  font-size: 0.82rem;
   letter-spacing: 0.04em;
+}
+
+.nav__links a[aria-current="page"],
+.mobile-menu a[aria-current="page"] {
+  color: var(--gold);
 }
 
 .logo {
@@ -188,6 +194,35 @@ p {
 
 .mobile-menu[hidden] {
   display: none;
+}
+
+.top-shell--page {
+  background:
+    radial-gradient(circle at 82% 20%, rgba(80, 110, 90, 0.28), transparent 30%),
+    linear-gradient(160deg, #15231c 0%, #1e3227 55%, #31483c 100%);
+}
+
+.page-hero {
+  padding: 2.2rem 6vw 4.4rem;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.page-hero h1 {
+  font-size: clamp(3.2rem, 8vw, 6.4rem);
+  letter-spacing: -0.04em;
+  font-weight: 400;
+}
+
+.page-hero h1 em {
+  font-style: italic;
+  color: #d7cbb4;
+}
+
+.page-hero__lead {
+  margin-top: 1.1rem;
+  max-width: 32rem;
+  color: rgba(243, 238, 230, 0.78);
 }
 
 .hero {
@@ -484,8 +519,86 @@ p {
 
 .artists,
 .tour,
-.services {
+.services,
+.home-paths,
+.page-copy {
   padding: 1.5rem 0 4rem;
+}
+
+.home-paths {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.home-paths__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 0 1.4rem;
+}
+
+.home-path {
+  background: var(--white);
+  border-radius: 1.4rem;
+  padding: 1.3rem 1.2rem 1.4rem;
+  box-shadow: 0 10px 30px rgba(27, 42, 34, 0.06);
+  display: grid;
+  gap: 0.5rem;
+  min-height: 100%;
+}
+
+.home-path h3 {
+  font-size: 1.7rem;
+}
+
+.home-path p {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.home-path span {
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+.page-copy {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+}
+
+.page-copy p + p {
+  margin-top: 1rem;
+}
+
+.page-copy p {
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.visit-card {
+  max-width: 760px;
+  margin: 0 auto 4rem;
+  padding: 1.4rem 1.5rem;
+  background: var(--white);
+  border-radius: 1.4rem;
+}
+
+.visit-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.visit-card p {
+  color: var(--muted);
+}
+
+.artist-bio {
+  color: var(--muted);
+  margin-top: 0.45rem;
+  font-size: 0.92rem;
 }
 
 .carousel {
@@ -626,7 +739,7 @@ p {
 }
 
 .book {
-  padding: 0 1.4rem 5rem;
+  padding: 2.2rem 1.4rem 5rem;
 }
 
 .book__panel {
@@ -674,13 +787,28 @@ p {
 }
 
 .site-footer {
-  padding: 1.4rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  padding: 1.6rem 1.4rem 2rem;
+  display: grid;
+  gap: 0.9rem;
   color: var(--muted);
   font-size: 0.86rem;
   border-top: 1px solid #e4ddd0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.2rem;
+}
+
+.footer-nav a[aria-current="page"] {
+  color: var(--forest);
+}
+
+.footer-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 @media (max-width: 900px) {
@@ -753,7 +881,17 @@ p {
     height: 240px;
   }
 
-  .site-footer {
+  .home-paths__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-meta {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-paths__grid {
+    grid-template-columns: 1fr;
   }
 }
